@@ -1,0 +1,26 @@
+﻿<Window x:Class="chat_client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:chat_client"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="400">
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top">
+            <Button Click="JoinBtnClick">Join</Button>
+            <Button Click="LeaveBtnClick">Leave</Button>
+            <Label>IP:</Label>
+            <TextBox Name="ipTxtBox" MinWidth="100">127.0.0.1</TextBox>
+            <Label>Port:</Label>
+            <TextBox Name="portTxtBox" MinWidth="50">3737</TextBox>
+        </ToolBar>
+        <DockPanel Margin="10,0,10,10" DockPanel.Dock="Bottom">
+            <Button IsDefault="True" Margin="10,0,0,0" Padding="20,5" DockPanel.Dock="Right" Click="SendBtnClick">Send</Button>
+            <TextBox Text="Lorem Ipsum!" x:Name="msgTxtBox" VerticalContentAlignment="Center"></TextBox>
+            <Button Content="Like" Click="LikeBtnClick" DockPanel.Dock="Right" Margin="5"/>
+            <Button Content="Dislike" Click="DislikeBtnClick" DockPanel.Dock="Right" Margin="5"/>
+        </DockPanel>
+        <ListBox Name="msgList" Margin="10"></ListBox>
+    </DockPanel>
+</Window>
